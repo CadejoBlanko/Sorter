@@ -96,6 +96,8 @@ def sorter(folder, path_f):
                 pass
             elif len(os.listdir(el)) != 0:
                 sorter(el, path_f)
+                if len(os.listdir(el)) == 0:
+                    os.rmdir(el) 
             else:
                 os.rmdir(el)  
 
